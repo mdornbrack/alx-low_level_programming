@@ -1,4 +1,8 @@
 #include "main.h"
+/**
+* positive_or_negative - prints whether an integer is positive, zero, or negative
+* @i: the integer to be checked
+*/
 void positive_or_negative(int i)
 {
 if (i > 0)
