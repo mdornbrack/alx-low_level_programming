@@ -1,2 +1,2 @@
 #!/bin/bash
-This repository is to work on the 0x00. C - Hello, World Project.
+This repository contains projects and tasks related to low-level programming in C, part of the ALX Software Engineering Program.
