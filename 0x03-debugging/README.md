@@ -1,2 +1,2 @@
 #!/bin/bash
-README.md file for debugging directory.
+This project focuses on debugging techniques and writing clean, error-free c code.
