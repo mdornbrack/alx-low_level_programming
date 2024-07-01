@@ -24,5 +24,5 @@ return (sign == 1 ? 2147483647 : -2147483648);
 n = n * 10 + (s[i] - '0');
 i++;
 }
-return (n * sign);
+return (n *sign);
 }
