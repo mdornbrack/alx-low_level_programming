@@ -30,3 +30,14 @@ Write a function that prints a string, followed by a new line, to `stdout`.
 ### Prototype
 ```c
 void _puts(char *str);
+
+
+## Tasks
+
+1. **98 Battery st.** - Write a function that takes a pointer to an int as parameter and updates the value it points to to 98.
+2. **Don't swap horses in crossing a stream** - Write a function that swaps the values of two integers.
+3. **This report, by its very length, defends itself against the risk of being read** - Write a function that returns the length of a string.
+4. **I do not fear computers. I fear the lack of them** - Write a function that prints a string, followed by a new line, to stdout.
+5. **A good engineer thinks in reverse and asks himself about the stylistic consequences of the components and systems he proposes** - Write a function that prints a string in reverse.
+6. **Half the lies they tell about me aren't true** - Write a function that prints every other character of a string, starting with the first character.
+7. **Winning is only half of it. Having fun is the other half** - Write a function that prints half of a string.
