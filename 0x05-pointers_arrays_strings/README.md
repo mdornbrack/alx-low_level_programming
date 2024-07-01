@@ -22,3 +22,11 @@ This project is about learning the concepts of pointers, arrays, and strings in 
 - No use of standard library functions like `printf`, `puts`, etc., except for `_putchar`.
 - Betty coding style is followed for all files.
 - Each file ends with a new line.
+
+## Task 3: I do not fear computers. I fear the lack of them
+
+Write a function that prints a string, followed by a new line, to `stdout`.
+
+### Prototype
+```c
+void _puts(char *str);
