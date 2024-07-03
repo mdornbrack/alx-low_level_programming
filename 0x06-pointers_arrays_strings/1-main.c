@@ -1,26 +1,40 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
-* main - check the code
-*
-* Return: Always 0.
-*/
+ * print_string - prints a string using _putchar
+ * @str: the string to print
+ */
+void print_string(char *str)
+{
+while (*str)
+{
+_putchar(*str);
+str++;
+}
+_putchar('\n');
+}
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
 char s1[98] = "Hello ";
 char s2[] = "World!\n";
 char *ptr;
 
-printf("%s\n", s1);
-printf("%s", s2);
+print_string(s1);
+print_string(s2);
+
 ptr = _strncat(s1, s2, 1);
-printf("%s\n", s1);
-printf("%s", s2);
-printf("%s\n", ptr);
+print_string(s1);
+print_string(s2);
+print_string(ptr);
+
 ptr = _strncat(s1, s2, 1024);
-printf("%s", s1);
-printf("%s", s2);
-printf("%s", ptr);
+print_string(s1);
+print_string(s2);
+print_string(ptr);
+
 return (0);
 }
