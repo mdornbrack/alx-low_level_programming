@@ -1,18 +1,31 @@
 #include "main.h"
 
 /**
-* print_diagsums - prints the sum of the two diagonals of a square matrix
-* @a: pointer to the first element of the matrix
-* @size: size of the matrix
-*
-* Return: void
-*/
+ * print_number - prints an integer using _putchar
+ * @n: the integer to print
+ */
+void print_number(int n)
+{
+if (n < 0)
+{
+_putchar('-');
+n = -n;
+}
+if (n / 10)
+print_number(n / 10);
+_putchar(n % 10 + '0');
+}
+
+/**
+ * print_diagsums - prints the sum of the two diagonals of a square matrix
+ * @a: pointer to the start of the matrix
+ * @size: the size of the matrix
+ */
 void print_diagsums(int *a, int size)
 {
 int i;
-int sum1 = 0, sum2 = 0;
-char buffer[20];
-int index;
+int sum1 = 0;
+int sum2 = 0;
 
 for (i = 0; i < size; i++)
 {
@@ -20,37 +33,9 @@ sum1 += a[i * size + i];
 sum2 += a[i * size + (size - i - 1)];
 }
 
-/* Convert sum1 to string and print */
-index = 0;
-if (sum1 < 0)
-{
-_putchar('-');
-sum1 = -sum1;
-}
-do
-{
-buffer[index++] = (sum1 % 10) + '0';
-sum1 /= 10;
-} while (sum1);
-while (index)
-_putchar(buffer[--index]);
-
+print_number(sum1);
 _putchar(',');
-
-/* Convert sum2 to string and print */
-index = 0;
-if (sum2 < 0)
-{
-_putchar('-');
-sum2 = -sum2;
-}
-do
-{
-buffer[index++] = (sum2 % 10) + '0';
-sum2 /= 10;
-} while (sum2);
-while (index)
-_putchar(buffer[--index]);
-
+_putchar(' ');
+print_number(sum2);
 _putchar('\n');
 }
