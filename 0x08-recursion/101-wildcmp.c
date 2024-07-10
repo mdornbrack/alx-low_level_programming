@@ -5,8 +5,7 @@
  * @s1: The first string to be compared
  * @s2: The second string which can contain the special character '*'
  *
- * Description: The special character '*' can replace any string (including an empty string).
- *
+ * Special character '*' can replace any string (including an empty string)
  * Return: 1 if the strings are considered identical, otherwise 0
  */
 
