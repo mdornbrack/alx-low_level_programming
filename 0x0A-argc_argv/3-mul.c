@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
-* main - multiplies two numbers
-* @argc: number of command line arguments
-* @argv: array of command line arguments
-*
-* Return: 0 if successful, 1 if there are not exactly two arguments
-*/
+ * main - multiplies two numbers
+ * @argc: number of command line arguments
+ * @argv: array of command line arguments
+ *
+ * Return: 0 if successful, 1 if there are not exactly two arguments
+ */
 int main(int argc, char *argv[])
 {
 int num1, num2, result;
