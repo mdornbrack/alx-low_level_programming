@@ -3,6 +3,8 @@
 
 #define SIZE 1024
 #define ABS(x) ((x) < 0 ? -(x) : (x))
+#define SUM(x, y) ((x) + (y))
+
 int _putchar(char c);
 void print_number(int n);
 void print_float(float n);
