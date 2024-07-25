@@ -56,8 +56,7 @@ void print_all(const char * const format, ...)
 va_list args;
 unsigned int i = 0, j, printed = 0;
 const char t_args[] = "cifs";
-void (*print_func[])(va_list) = {print_char, print_int, print_float,
-print_string};
+void (*print_func[])(va_list) = {print_char, print_int, print_float, print_string};
 
 va_start(args, format);
 while (format && format[i])
