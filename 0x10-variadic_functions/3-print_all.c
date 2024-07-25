@@ -54,29 +54,24 @@ printf("%s", str);
 void print_all(const char * const format, ...)
 {
 va_list args;
-unsigned int i = 0, j, printed = 0;
+unsigned int i, j, printed = 0;
 const char t_args[] = "cifs";
 void (*print_func[])(va_list) = {print_char, print_int, print_float, print_string};
 
 va_start(args, format);
-while (format && format[i])
+for (i = 0; format && format[i]; i++)
 {
-j = 0;
-while (t_args[j])
+for (j = 0; t_args[j]; j++)
 {
-if (format[i] == t_args[j] && printed)
+if (format[i] == t_args[j])
 {
+if (printed)
 printf(", ");
-break;
-}
-j++;
-}
-if (t_args[j])
-{
 print_func[j](args);
 printed = 1;
+break;
 }
-i++;
+}
 }
 printf("\n");
 va_end(args);
