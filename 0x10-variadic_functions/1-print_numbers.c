@@ -11,8 +11,11 @@
  */
 int _putchar(char c)
 {
-return write(1, &c, 1);
+return (write(1, &c, 1));
 }
+
+void print_number(int number);
+void print_separator(const char *separator);
 
 /**
  * print_numbers - prints numbers followed by a new line.
@@ -23,13 +26,27 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 va_list args;
 unsigned int i;
-int number;
 
 va_start(args, n);
 
 for (i = 0; i < n; i++)
 {
-number = va_arg(args, int);
+print_number(va_arg(args, int));
+if (separator != NULL && i != n - 1)
+{
+print_separator(separator);
+}
+}
+_putchar('\n');
+va_end(args);
+}
+
+/**
+ * print_number - prints an integer
+ * @number: the integer to print
+ */
+void print_number(int number)
+{
 if (number < 0)
 {
 _putchar('-');
@@ -50,12 +67,18 @@ div *= 10;
 }
 while (div > 0)
 {
-_putchar((number / div) + '0');
+_putchar((number / div)+'0');
 number %= div;
 div /= 10;
 }
 }
-if (separator != NULL && i != n - 1)
+}
+
+/**
+ * print_separator - prints the separator
+ * @separator: the separator to print
+ */
+void print_separator(const char *separator)
 {
 int j = 0;
 while (separator[j])
@@ -63,8 +86,4 @@ while (separator[j])
 _putchar(separator[j]);
 j++;
 }
-}
-}
-_putchar('\n');
-va_end(args);
 }
